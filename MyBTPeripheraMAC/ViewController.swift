@@ -59,7 +59,7 @@ extension ViewController: CBPeripheralManagerDelegate {
         serivce.characteristics = arrCharacteristics
         peripheralMangger.add(serivce)
     }
-    //    didAdd service
+    //  didAdd service
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
         if error != nil {
             lblInfo.stringValue  = lblInfo.stringValue  + "\n \(error!.localizedDescription)"
@@ -97,6 +97,7 @@ extension ViewController: CBPeripheralManagerDelegate {
         }
         peripheralMangger.respond(to: aRequest!, withResult: .success)
     }
+    
 
 
 }
